@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {Nav, Navbar, Image} from 'react-bootstrap';
 
 import Home from './pages/home';
+import Portfolio from './pages/portfolio';
 
 import logo from './images/Logo.svg'
 
@@ -25,6 +26,7 @@ const Navigation = () => (
 
   <Switch>
     <Route exact path='/' component={Home}/>
+    <Route path='/portfolio' component={Portfolio}/>
   </Switch>
   </>
 )
