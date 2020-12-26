@@ -6,29 +6,22 @@ import {Nav, Navbar, Image} from 'react-bootstrap';
 
 import Home from './pages/home';
 import Portfolio from './pages/portfolio';
+import Resume from './pages/resume';
 
 import logo from './images/Logo.svg'
 
 const Navigation = () => (
-  <>
   <Navbar variant='light' expand="lg">
     <Navbar.Brand as={Link} to='/'><Image width="50px" src={logo}/></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="heading font-weight-bold">
-        <Nav.Link as={Link} to='/about'>About</Nav.Link>
         <Nav.Link as={Link} to='/portfolio'>Portfolio</Nav.Link>
         <Nav.Link as={Link} to='/resume'>Resume</Nav.Link>
-        <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
+        <Nav.Link as={Link} to='/about'>About</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
-
-  <Switch>
-    <Route exact path='/' component={Home}/>
-    <Route path='/portfolio' component={Portfolio}/>
-  </Switch>
-  </>
 )
 
 const Footer = () => (
@@ -42,6 +35,13 @@ const Footer = () => (
 const App = () => (
   <Router>
     <Navigation />
+
+    <Switch>
+      <Route exact path='/' component={Home}/>
+      <Route path='/portfolio' component={Portfolio}/>
+      <Route path='/resume' component={Resume}/>
+    </Switch>
+
     <Footer/>
   </Router>
 )
