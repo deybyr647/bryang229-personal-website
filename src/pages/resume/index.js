@@ -1,6 +1,6 @@
 import {Col, Row, Container, Jumbotron, ResponsiveEmbed} from 'react-bootstrap';
 
-import resumePDF from './Profile.pdf';
+import resumePDF from './Resume.pdf';
 import './resume.css';
 
 const ResumeDoc = () => (
@@ -15,11 +15,23 @@ const ResumeDoc = () => (
 
 const Resume = () => (
     <Container className='mt-4'>
+        <Row className='text-center mb-3'>
+            <Col>
+                <h2 className='text-secondary'>My Resume</h2>
+            </Col>
+        </Row>
+
         <Row>
             <Col>
                 <Jumbotron className='p-3'>
                     <ResumeDoc/>
                 </Jumbotron>
+            </Col>
+        </Row>
+
+        <Row className='text-center mb-3'>
+            <Col>
+                <h2><a href='https://google.com' className='text-decoration-none text-secondary'>View In A New Tab</a></h2>
             </Col>
         </Row>
     </Container>
