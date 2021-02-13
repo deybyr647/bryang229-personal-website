@@ -34,7 +34,7 @@ const cardContent = [
         description: "Lorem ipsum dolor sit amet, consectetur adispising elit",
     },
     {
-        title: "A Bit About Me...",
+        title: "A Little Intro...",
         image: null,
         description: "Hey there! Welcome to my site! Make yourself at home while you grab some water. This is my online portfolio, and is home to various things, from my resume and contact information, to a variety of personal projects I've invested time in. I'm always willing to collaborate, and if you are too, don't hesitate to contact me! I don't bite, usually..."
     }

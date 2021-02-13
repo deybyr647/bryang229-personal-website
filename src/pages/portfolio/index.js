@@ -1,6 +1,8 @@
 import './portfolio.css';
 
-import java from '../../images/java.png'
+import java from '../../images/java.png';
+import radar from '../../images/Radar.jpg';
+import moveTheDot from '../../images/image0.jpg';
 
 import {Card, Col, Container, Row, CardColumns, Jumbotron} from 'react-bootstrap';
 
@@ -39,16 +41,16 @@ const ProjectCollection = ({children}) => (
 
 const projectList = [
     {
-        title: "Test Project",
+        title: "Radar",
         description: "About the project",
-        image: java,
-        github: 'https://github.com/bryang229'
+        image: radar,
+        github: 'https://github.com/bryang229/radar'
     },
     {
-        title: "Test Project",
-        description: "About the project",
-        image: java,
-        github: 'https://github.com/bryang229'
+        title: "MoveTheDot",
+        description: "This is an Arduino based project using two the LED Control Library. It also uses a LED Modules and a Joystick module incorporating the X and Y axis sensibility of the joystick. One of my first Arduino projects which led me to attempt different similarly styled ventures.",
+        image: moveTheDot,
+        github: 'https://github.com/bryang229/MoveTheDot'
     },
     {
         title: "Test Project",

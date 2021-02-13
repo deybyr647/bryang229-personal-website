@@ -1,7 +1,6 @@
 import {Col, Row, Container, Image, Card, ListGroup, ListGroupItem, Jumbotron} from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {FaLinkedin, FaEnvelope, FaGithub, FaJava, FaPython, FaNodeJs} from 'react-icons/fa';
+import {SiCplusplus} from 'react-icons/si';
 
 import bryan from '../../images/bryan.jpg';
 import './about.css';
@@ -23,24 +22,43 @@ const Bio = () => (
 )
 
 const ContactCard = ({obj}) => (
-    <ListGroupItem className='m-3'><FontAwesomeIcon icon={obj.ico}/> <a href={obj.link} className='text-decoration-none' rel='noopener noreferrer' target='_blank'>{obj.name}</a></ListGroupItem>
+    <ListGroupItem className='m-3'>{obj.ico} <a href={obj.link} className='text-decoration-none' rel='noopener noreferrer' target='_blank'>{obj.name}</a></ListGroupItem>
 )
 
 const contactInfo = [
     {
         name: "LinkedIn",
         link: "https://linkedin.com",
-        ico: faLinkedin
+        ico: <FaLinkedin/>
     },
     {
         name: "GitHub",
         link: "https://github.com",
-        ico: faGithub
+        ico: <FaGithub/>
     },
     {
         name: "Email",
         link: "mailto:bryang229@gmail.com",
-        ico: faEnvelope
+        ico: <FaEnvelope/>
+    }
+]
+
+const skillArr = [
+    {
+        name: "Java",
+        ico: <FaJava/>,
+    },
+    {
+        name: "C++",
+        ico: <SiCplusplus/>
+    },
+    {
+        name: "NodeJS",
+        ico: <FaNodeJs/>
+    },
+    {
+        name: "Python",
+        ico: <FaPython/>
     }
 ]
 
@@ -63,7 +81,7 @@ const SkillCard = ({skillObj}) => (
 
 const About = () => (
     <Container className='my-3'>
-        <Row className='align-items-center justify-content-center'>
+        <Row className='align-items-center justify-content-center m-auto'>
 
             <Col xl={4} className=''>
                 <Bio/>
@@ -71,19 +89,18 @@ const About = () => (
 
             <Col xl={4} className=''>
                 <Row>
-                    <SkillCard/>
-                    <SkillCard/>
-                    <SkillCard/>
+                    {skillArr.map(el => <SkillCard skillObj={el}/>)}
                 </Row>
             </Col>
 
             <Col xl={4} className=''>
-                <Jumbotron className=''>
-                    
-                    <p>
-                    Hey there! Welcome to my site! Make yourself at home while you grab some water. This is my online portfolio, and is home to various things, from my resume and contact information, to a variety of personal projects I've invested time in. I'm always willing to collaborate, and if you are too, don't hesitate to contact me! I don't bite, usually...
-                    </p>
-                </Jumbotron>
+                <Row>
+                    <Jumbotron className='m-1'>
+                        <p>
+                        Hey there! Welcome to my site! Make yourself at home while you grab some water. This is my online portfolio, and is home to various things, from my resume and contact information, to a variety of personal projects I've invested time in. I'm always willing to collaborate, and if you are too, don't hesitate to contact me! I don't bite, usually...
+                        </p>
+                    </Jumbotron>
+                </Row>
             </Col>
             
         </Row>
